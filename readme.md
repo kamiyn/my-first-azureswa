@@ -9,6 +9,9 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
+# start with StaticWebApplication CLI at https://localhost:5001
+$ swa start http://localhost:3000/ --ssl --ssl-cert=localhost.crt --ssl-key=localhost.key --host=127.0.0.1 --port=5001
+
 # build for production and launch server
 $ npm run build
 $ npm run start
