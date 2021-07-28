@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Sample</h1>
-    <v-btn @click="clickLogin">LOGIN</v-btn>
+    <button @click="clickLogin">LOGIN</button>
   </div>
 </template>
 
@@ -15,12 +15,12 @@ const msalConfig = {
     authority:
       'https://kamiynb2cpoc.b2clogin.com/kamiynb2cpoc.onmicrosoft.com/B2C_1_Susi',
     knownAuthorities: ['kamiynb2cpoc.b2clogin.com'],
-    redirectUri: location.origin
-  }
+    redirectUri: location.origin,
+  },
 }
 
 const loginRequest = {
-  scopes: ['openid', 'offline_access']
+  scopes: ['openid', 'offline_access'],
 }
 
 const msalInstance = new msal.PublicClientApplication(msalConfig)
@@ -37,8 +37,8 @@ async function loginAsync() {
 export default Vue.extend({
   methods: {
     async clickLogin() {
-      await loginAsync();
-    }
-  }
+      await loginAsync()
+    },
+  },
 })
 </script>
